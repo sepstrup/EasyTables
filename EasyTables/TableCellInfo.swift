@@ -1,0 +1,40 @@
+//
+//  TableCellInfo.swift
+//  MyKids
+//
+//  Created by Peter Sepstrup on 26/6/17.
+//  Copyright © 2017 powerLABS. All rights reserved.
+//
+
+import Foundation
+
+class TableCellInfo: Equatable {
+    /// Returns a Boolean value indicating whether two values are equal.
+    ///
+    /// Equality is the inverse of inequality. For any values `a` and `b`,
+    /// `a == b` implies that `a != b` is `false`.
+    ///
+    /// - Parameters:
+    ///   - lhs: A value to compare.
+    ///   - rhs: Another value to compare.
+    static func ==(lhs: TableCellInfo, rhs: TableCellInfo) -> Bool {
+        return lhs.uuid == rhs.uuid
+    }
+
+    var identifier: String
+    var data: TableCellData?
+    private var uuid: String
+    
+    required init(identifier: String) {
+        self.identifier = identifier
+        uuid = UUID().uuidString
+    }
+    
+    required init(identifier: String, data: TableCellData) {
+        self.identifier = identifier
+        self.data = data
+        uuid = UUID().uuidString
+    }
+    
+    
+}
