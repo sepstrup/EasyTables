@@ -13,7 +13,6 @@ class EasyTableViewController: UITableViewController {
     var sections: [[TableCellInfo]] = []
     
     func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
-        print("add below")
         sections[indexPath.section].insert(contentsOf: data, at: indexPath.row+1)
         var newRows: [IndexPath] = []
         var newCount = 1
@@ -41,7 +40,6 @@ class EasyTableViewController: UITableViewController {
         var delRows: [IndexPath] = []
         let delSender: Int = includeSender ? 0 : 1
         for i in delSender...(numberOfRows-1) {
-            print(i.description)
             sections[indexPath.section].remove(at: indexPath.row-i)
             delRows.append(IndexPath(row: indexPath.row-i, section: indexPath.section))
         }
