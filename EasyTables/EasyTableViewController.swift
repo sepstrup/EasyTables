@@ -10,10 +10,11 @@ import UIKit
 
 class EasyTableViewController: UITableViewController {
 
-    var sections: [[TableCellInfo]] = []
+    var sections = Sections()
     
     func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
-        sections[indexPath.section].insert(contentsOf: data, at: indexPath.row+1)
+        let section = sections.at(index: indexPath.section)
+        section.rows.insert(contentsOf: data, at: indexPath.row+1)
         var newRows: [IndexPath] = []
         var newCount = 1
         for _ in data {
@@ -27,8 +28,9 @@ class EasyTableViewController: UITableViewController {
     
     func removeRowsBelow(indexPath: IndexPath, numberOfRows: Int) {
         var delRows: [IndexPath] = []
+        let section = sections.at(index: indexPath.section)
         for i in 1...numberOfRows {
-            sections[indexPath.section].remove(at: indexPath.row+1)
+            section.rows.remove(at: indexPath.row+1)
             delRows.append(IndexPath(row: indexPath.row+i, section: indexPath.section))
         }
         tableView.beginUpdates()
@@ -38,9 +40,10 @@ class EasyTableViewController: UITableViewController {
     
     func removeRowsAbove(indexPath: IndexPath, numberOfRows: Int, includeSender: Bool = false) {
         var delRows: [IndexPath] = []
+        let section = sections.at(index: indexPath.section)
         let delSender: Int = includeSender ? 0 : 1
         for i in delSender...(numberOfRows-1) {
-            sections[indexPath.section].remove(at: indexPath.row-i)
+            section.rows.remove(at: indexPath.row-i)
             delRows.append(IndexPath(row: indexPath.row-i, section: indexPath.section))
         }
         tableView.beginUpdates()
