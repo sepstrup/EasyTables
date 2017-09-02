@@ -8,13 +8,13 @@
 
 import Foundation
 
-extension Array where Element: TableCellInfo {
+public extension Array where Element: TableCellInfo {
     
-    mutating func append(identifier: String) {
+    public mutating func append(identifier: String) {
         append(Element.init(identifier: identifier))
     }
     
-    mutating func append(identifier: String, data: TableCellData) {
+    public mutating func append(identifier: String, data: TableCellData) {
         append(Element.init(identifier: identifier, data: data))
     }
     

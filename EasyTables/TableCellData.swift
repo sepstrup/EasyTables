@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol TableCellData {
+public protocol TableCellData {
     
 }

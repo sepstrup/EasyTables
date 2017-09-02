@@ -8,12 +8,12 @@
 
 import Foundation
 
-class TableSection: Equatable {
+public class TableSection: Equatable {
     
-    var title: String?
-    var rows: [TableCellInfo] = []
+    public var title: String?
+    public var rows: [TableCellInfo] = []
     
-    var count: Int {
+    public var count: Int {
         get {
             return rows.count
         }
@@ -25,38 +25,38 @@ class TableSection: Equatable {
     
     private var uuid: String
     
-    required init() {
+    public required init() {
         uuid = UUID().uuidString
     }
     
-    required init(title: String) {
+    public required init(title: String) {
         self.title = title
         uuid = UUID().uuidString
     }
     
-    required init(title: String, rows: [TableCellInfo]) {
+    public required init(title: String, rows: [TableCellInfo]) {
         self.title = title
         self.rows = rows
         uuid = UUID().uuidString
     }
     
-    func add(row: TableCellInfo) {
+    public func add(row: TableCellInfo) {
         rows.append(row)
     }
     
-    func add(rows: [TableCellInfo]) {
+    public func add(rows: [TableCellInfo]) {
         self.rows.append(contentsOf: rows)
     }
     
-    func add(row: TableCellInfo, at: Int) {
+    public func add(row: TableCellInfo, at: Int) {
         rows.insert(row, at: at)
     }
     
-    func add(rows: [TableCellInfo], at: Int) {
+    public func add(rows: [TableCellInfo], at: Int) {
         self.rows.insert(contentsOf: rows, at: at)
     }
     
-    func row(at: Int) -> TableCellInfo {
+    public func row(at: Int) -> TableCellInfo {
         return rows[at]
     }
     

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class EasyTableViewController: UITableViewController {
+open class EasyTableViewController: UITableViewController {
 
     var sections = Sections()
     
-    func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
+    public func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
         let section = sections.at(index: indexPath.section)
         section.rows.insert(contentsOf: data, at: indexPath.row+1)
         var newRows: [IndexPath] = []
@@ -26,7 +26,7 @@ class EasyTableViewController: UITableViewController {
         tableView.endUpdates()
     }
     
-    func removeRowsBelow(indexPath: IndexPath, numberOfRows: Int) {
+    public func removeRowsBelow(indexPath: IndexPath, numberOfRows: Int) {
         var delRows: [IndexPath] = []
         let section = sections.at(index: indexPath.section)
         for i in 1...numberOfRows {
@@ -38,7 +38,7 @@ class EasyTableViewController: UITableViewController {
         tableView.endUpdates()
     }
     
-    func removeRowsAbove(indexPath: IndexPath, numberOfRows: Int, includeSender: Bool = false) {
+    public func removeRowsAbove(indexPath: IndexPath, numberOfRows: Int, includeSender: Bool = false) {
         var delRows: [IndexPath] = []
         let section = sections.at(index: indexPath.section)
         let delSender: Int = includeSender ? 0 : 1
