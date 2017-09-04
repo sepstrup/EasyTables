@@ -12,6 +12,14 @@ open class EasyTableViewController: UITableViewController {
 
     var sections = Sections()
     
+    override open func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
+    
+    override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sections.at(index: section).count
+    }
+    
     public func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
         let section = sections.at(index: indexPath.section)
         section.rows.insert(contentsOf: data, at: indexPath.row+1)
