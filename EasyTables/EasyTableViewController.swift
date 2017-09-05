@@ -10,7 +10,7 @@ import UIKit
 
 open class EasyTableViewController: UITableViewController {
 
-    var sections = Sections()
+    public var sections = Sections()
     
     override open func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -18,6 +18,10 @@ open class EasyTableViewController: UITableViewController {
     
     override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections.at(index: section).count
+    }
+    
+    override open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections.at(index: section).title
     }
     
     public func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
