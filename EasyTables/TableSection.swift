@@ -49,7 +49,7 @@ public class TableSection: Equatable {
     }
     
     public func addAsFirst(row: TableCellInfo) {
-        self.add(row: row, at: 0)
+        self.add(row: row, at: 0)
     }
     
     public func add(row: TableCellInfo, at: Int) {
