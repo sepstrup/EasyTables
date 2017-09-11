@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Peter Sepstrup" => "peter@sepstrupnet.dk" }
   s.platform     = :ios, "10.0"
-  s.source       = { :git => "https://github.com/sepstrup/EasyTables.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/sepstrup/EasyTables.git", :branch => "master", :tag => "#{s.version}" }
 
   s.source_files = "EasyTables", "EasyTables/**/*.{h,m,swift}"
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
