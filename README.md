@@ -8,7 +8,8 @@ EasyTables
 
 ### How do I get set up? ###
 
-* Extend from EasyTableViewController when working with table views
+* Optional: Extend from EasyTableViewController when working with table views
+* - or implement count and header titels your self
 * Conform to TableCellData for the data to your rows and cast from it in your rendering
 * Use the build in methods to easy update your view
 
