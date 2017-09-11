@@ -3,6 +3,9 @@
 EasyTables
 Demo project: https://github.com/sepstrup/EasyTablesDemo/
 
+Cocoapod:
+pod 'EasyTables', :git => 'https://github.com/sepstrup/EasyTables.git'
+
 ### What is this repository for? ###
 
 * Adding and removing rows and sections in tables is now easy!
