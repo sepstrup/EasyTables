@@ -1,6 +1,7 @@
 # README #
 
 EasyTables
+Demo project: https://github.com/sepstrup/EasyTablesDemo/
 
 ### What is this repository for? ###
 
