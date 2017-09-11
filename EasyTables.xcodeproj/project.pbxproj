@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D47102E1F596F1400E4F2D2 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D47102D1F596F1400E4F2D2 /* TableSection.swift */; };
-		5D4710301F596F2800E4F2D2 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D47102F1F596F2800E4F2D2 /* Sections.swift */; };
+		5D4710301F596F2800E4F2D2 /* EasyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D47102F1F596F2800E4F2D2 /* EasyTable.swift */; };
 		5DEA0E3C1F570B6B00B2972A /* EasyTables.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DEA0E3A1F570B6B00B2972A /* EasyTables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DEA0E431F570BA400B2972A /* EasyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA0E421F570BA400B2972A /* EasyTableViewController.swift */; };
 		5DEA0E461F570BF500B2972A /* TableCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA0E441F570BF500B2972A /* TableCellData.swift */; };
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		5D47102D1F596F1400E4F2D2 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
-		5D47102F1F596F2800E4F2D2 /* Sections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
+		5D47102F1F596F2800E4F2D2 /* EasyTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTable.swift; sourceTree = "<group>"; };
 		5DEA0E371F570B6B00B2972A /* EasyTables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DEA0E3A1F570B6B00B2972A /* EasyTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTables.h; sourceTree = "<group>"; };
 		5DEA0E3B1F570B6B00B2972A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 				5DEA0E451F570BF500B2972A /* TableCellInfo.swift */,
 				5DEA0E481F570C7200B2972A /* ArrayExtension.swift */,
 				5D47102D1F596F1400E4F2D2 /* TableSection.swift */,
-				5D47102F1F596F2800E4F2D2 /* Sections.swift */,
+				5D47102F1F596F2800E4F2D2 /* EasyTable.swift */,
 			);
 			path = EasyTables;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DEA0E471F570BF500B2972A /* TableCellInfo.swift in Sources */,
-				5D4710301F596F2800E4F2D2 /* Sections.swift in Sources */,
+				5D4710301F596F2800E4F2D2 /* EasyTable.swift in Sources */,
 				5D47102E1F596F1400E4F2D2 /* TableSection.swift in Sources */,
 				5DEA0E461F570BF500B2972A /* TableCellData.swift in Sources */,
 				5DEA0E431F570BA400B2972A /* EasyTableViewController.swift in Sources */,
