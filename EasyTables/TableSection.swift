@@ -48,6 +48,10 @@ public class TableSection: Equatable {
         self.rows.append(contentsOf: rows)
     }
     
+    public func addAsFirst(row: TableCellInfo) {
+        self.add(row: row, at: 0)
+    }
+    
     public func add(row: TableCellInfo, at: Int) {
         rows.insert(row, at: at)
     }
