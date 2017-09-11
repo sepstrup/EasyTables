@@ -19,3 +19,4 @@ EasyTables
 ### Who do I talk to? ###
 
 * Peter Sepstrup
+* Create an issue
