@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "EasyTables"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Create tables and manage the content of them much easier"
   s.description  = "See more: https://github.com/sepstrup/EasyTables/blob/master/README.md"
 
