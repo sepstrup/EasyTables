@@ -40,6 +40,30 @@ public class TableSection: Equatable {
         uuid = UUID().uuidString
     }
     
+    public required init(rows: [TableCellInfo]) {
+        self.rows = rows
+        uuid = UUID().uuidString
+    }
+    
+    public required init(title: String, rows: [String]) {
+        var newRows = [TableCellInfo]()
+        for s in rows {
+            newRows.append(identifier: s)
+        }
+        self.title = title
+        self.rows = newRows
+        uuid = UUID().uuidString
+    }
+    
+    public required init(rows: [String]) {
+        var newRows = [TableCellInfo]()
+        for s in rows {
+            newRows.append(identifier: s)
+        }
+        self.rows = newRows
+        uuid = UUID().uuidString
+    }
+    
     public func add(row: TableCellInfo) {
         rows.append(row)
     }
