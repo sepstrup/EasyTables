@@ -60,6 +60,28 @@ public class TableSection: Equatable {
         self.rows.insert(contentsOf: rows, at: at)
     }
     
+    public func add(row: String) {
+        self.add(row: TableCellInfo(identifier: row))
+    }
+    
+    public func add(row: String, at: Int) {
+        self.add(row: TableCellInfo(identifier: row), at: at)
+    }
+    
+    public func add(rows: [String]) {
+        for s in rows {
+            add(row: TableCellInfo(identifier: s))
+        }
+    }
+    
+    public func add(rows: [String], at: Int) {
+        var newRows = [TableCellInfo]()
+        for s in rows {
+            newRows.append(identifier: s)
+        }
+        add(rows: newRows, at: at)
+    }
+    
     public func row(at: Int) -> TableCellInfo {
         return rows[at]
     }
