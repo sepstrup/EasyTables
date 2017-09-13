@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D01A7B51F6963F300BB30C3 /* EasyTables.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyTables.framework; path = "/Users/pse/Development/EasyTablesDemo/../../Library/Developer/Xcode/DerivedData/EasyTables-gfoinadrgnrhchfxaicdjnyadlqk/Build/Products/Debug-iphonesimulator/EasyTables.framework"; sourceTree = "<absolute>"; };
 		5D47102D1F596F1400E4F2D2 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 		5D47102F1F596F2800E4F2D2 /* EasyTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTable.swift; sourceTree = "<group>"; };
 		5DEA0E371F570B6B00B2972A /* EasyTables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,11 +40,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D01A7B31F6963F300BB30C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D01A7B51F6963F300BB30C3 /* EasyTables.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5DEA0E2D1F570B6B00B2972A = {
 			isa = PBXGroup;
 			children = (
 				5DEA0E391F570B6B00B2972A /* EasyTables */,
 				5DEA0E381F570B6B00B2972A /* Products */,
+				5D01A7B31F6963F300BB30C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,6 +296,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)Demo/../../Library/Developer/Xcode/DerivedData/EasyTables-gfoinadrgnrhchfxaicdjnyadlqk/Build/Products/Debug-iphonesimulator",
+				);
 				INFOPLIST_FILE = EasyTables/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -308,6 +322,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)Demo/../../Library/Developer/Xcode/DerivedData/EasyTables-gfoinadrgnrhchfxaicdjnyadlqk/Build/Products/Debug-iphonesimulator",
+				);
 				INFOPLIST_FILE = EasyTables/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
