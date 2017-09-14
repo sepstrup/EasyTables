@@ -106,6 +106,10 @@ public class TableSection: Equatable {
         add(rows: newRows, at: at)
     }
     
+    public func delete(row: Int) {
+        rows.remove(at: row)
+    }
+    
     public func row(at: Int) -> TableCellInfo {
         return rows[at]
     }

@@ -66,6 +66,14 @@ public class EasyTable {
         return self.at(index: at.section).row(at: at.row)
     }
     
+    public func delete(section: Int) {
+        sections.remove(at: section)
+    }
+    
+    public func delete(row: IndexPath) {
+        sections[row.section].rows.remove(at: row.row)
+    }
+    
     public func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
         guard let table = tableView else { return }
         let section = at(index: indexPath.section)
