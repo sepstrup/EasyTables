@@ -1,7 +1,9 @@
 # README #
 
 EasyTables
+#### I strongly recommend to clone the demo project
 Demo project: https://github.com/sepstrup/EasyTablesDemo/
+
 
 Cocoapod:
 ```
@@ -21,7 +23,7 @@ class TableViewController: EasyTableViewController {
 ...
 ```
 
-* Use the build in methods to easy update your view
+* Use the build in methods to easy build your data source
 
 ```
 override func viewDidLoad() {
@@ -57,6 +59,30 @@ Cast it when you render your view
             guard let specialCell = cell as? SpecialTableViewCell else { break }
             specialCell.textLabel?.text = table.row(at: indexPath).identifier
             specialCell.detailTextLabel?.text = data.subTitle
+```
+* Use these methods to "live" update your view
+```
+    public func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo])
+    
+    public func removeRowsBelow(indexPath: IndexPath, numberOfRows: Int) 
+
+    public func removeRowsAbove(indexPath: IndexPath, numberOfRows: Int, includeSender: Bool = false)
+```
+Example:
+```
+if !showMore {
+                // CellData for example
+                let data = CellData()
+                data.subTitle = "Special subtitle"
+                // New rows, including a special one containing data
+                let newRows = [
+                    TableCellInfo(identifier: "New row"),
+                    TableCellInfo(identifier: "Special Row", data: data),
+                    TableCellInfo(identifier: "Done")
+                ]
+                // Add rows below the Show More row
+                table.addRowsBelow(indexPath: indexPath, data: newRows)
+        ....
 ```
 ### Contribution guidelines ###
 
