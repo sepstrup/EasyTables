@@ -10,6 +10,9 @@ import Foundation
 
 public class EasyTable {
     
+    /**
+     This is needed to do updates to the view after rendering
+     */
     var tableView: UITableView?
     
     public var sections: [TableSection] = []
@@ -74,6 +77,9 @@ public class EasyTable {
         sections[row.section].rows.remove(at: row.row)
     }
     
+    /**
+     Add rows in the view, inserted with animation
+     */
     public func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
         guard let table = tableView else { return }
         let section = at(index: indexPath.section)
@@ -89,6 +95,9 @@ public class EasyTable {
         table.endUpdates()
     }
     
+    /**
+     Remove rows in the view with animation, counterpart to addRowsBelow
+     */
     public func removeRowsBelow(indexPath: IndexPath, numberOfRows: Int) {
         guard let table = tableView else { return }
         var delRows: [IndexPath] = []
@@ -102,6 +111,9 @@ public class EasyTable {
         table.endUpdates()
     }
     
+    /**
+     removes rows above, optional include the sender (the gived indexpath), this is often used as a "done" button or similar
+     */
     public func removeRowsAbove(indexPath: IndexPath, numberOfRows: Int, includeSender: Bool = false) {
         guard let table = tableView else { return }
         var delRows: [IndexPath] = []
