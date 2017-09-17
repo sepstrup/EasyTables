@@ -31,7 +31,7 @@ public class EasyTable {
         }
     }
     
-    func isEmpty() -> Bool {
+    public func isEmpty() -> Bool {
         return count == 0
     }
     
