@@ -17,6 +17,18 @@ public class EasyTable {
     
     public var sections: [TableSection] = []
     
+    public var count: Int {
+        get {
+            return sections.count
+        }
+    }
+    
+    public var isEmpty: Bool {
+        get {
+            return count == 0
+        }
+    }
+    
     public init() {
         
     }
@@ -25,15 +37,7 @@ public class EasyTable {
         self.tableView = tableView
     }
     
-    public var count: Int {
-        get {
-            return sections.count
-        }
-    }
     
-    public func isEmpty() -> Bool {
-        return count == 0
-    }
     
     public func section(at: Int) -> TableSection {
         return get(at: at)

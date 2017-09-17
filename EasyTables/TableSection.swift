@@ -14,6 +14,18 @@ public class TableSection: Equatable {
     public var rows: [TableCellInfo] = []
     private var uuid: String
     
+    public var count: Int {
+        get {
+            return rows.count
+        }
+    }
+    
+    public var isEmpty: Bool {
+        get {
+            return count == 0
+        }
+    }
+    
     public required init() {
         uuid = UUID().uuidString
     }
@@ -51,16 +63,6 @@ public class TableSection: Equatable {
         }
         self.rows = newRows
         uuid = UUID().uuidString
-    }
-    
-    public var count: Int {
-        get {
-            return rows.count
-        }
-    }
-    
-    public func isEmpty() -> Bool {
-        return count == 0
     }
     
     public static func ==(lhs: TableSection, rhs: TableSection) -> Bool {
