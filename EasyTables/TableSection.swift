@@ -12,17 +12,6 @@ public class TableSection: Equatable {
     
     public var title: String?
     public var rows: [TableCellInfo] = []
-    
-    public var count: Int {
-        get {
-            return rows.count
-        }
-    }
-    
-    public static func ==(lhs: TableSection, rhs: TableSection) -> Bool {
-        return lhs.uuid == rhs.uuid
-    }
-    
     private var uuid: String
     
     public required init() {
@@ -62,6 +51,20 @@ public class TableSection: Equatable {
         }
         self.rows = newRows
         uuid = UUID().uuidString
+    }
+    
+    public var count: Int {
+        get {
+            return rows.count
+        }
+    }
+    
+    func isEmpty() -> Bool {
+        return count == 0
+    }
+    
+    public static func ==(lhs: TableSection, rhs: TableSection) -> Bool {
+        return lhs.uuid == rhs.uuid
     }
     
     public func add(row: TableCellInfo) {
