@@ -119,4 +119,8 @@ public class TableSection: Equatable {
         return rows[at]
     }
     
+    public func index(of: TableCellInfo) -> Int? {
+        return rows.index(of: of)
+    }
+    
 }
