@@ -1,10 +1,10 @@
-//
-//  ArrayExtension.swift
-//  EasyTables
-//
-//  Created by Peter Sepstrup on 30/8/17.
-//  Copyright © 2017 powerLABS. All rights reserved.
-//
+///**
+/**
+ * EasyTables
+ * Created by: Peter Sepstrup on 30/8/17
+ *
+ * License: MIT
+ */
 
 import Foundation
 

@@ -1,10 +1,10 @@
-//
-//  TableCellInfo.swift
-//  MyKids
-//
-//  Created by Peter Sepstrup on 26/6/17.
-//  Copyright © 2017 powerLABS. All rights reserved.
-//
+///**
+/**
+ * EasyTables
+ * Created by: Peter Sepstrup on 26/6/17
+ *
+ * License: MIT
+ */
 
 import Foundation
 
