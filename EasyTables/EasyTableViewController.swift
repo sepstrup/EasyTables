@@ -14,7 +14,7 @@ open class EasyTableViewController: UITableViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        table = EasyTable(tableView: self.tableView)
+        loadDataSource()
     }
     
     override open func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,6 +27,10 @@ open class EasyTableViewController: UITableViewController {
     
     override open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return table.at(index: section).title
+    }
+    
+    func loadDataSource() {
+        table = EasyTable(tableView: self.tableView)
     }
     
 }
