@@ -29,7 +29,7 @@ open class EasyTableViewController: UITableViewController {
         return table.at(index: section).title
     }
     
-    func loadDataSource() {
+    open func loadDataSource() {
         table = EasyTable(tableView: self.tableView)
     }
     
