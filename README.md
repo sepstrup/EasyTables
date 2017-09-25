@@ -28,6 +28,14 @@ class TableViewController: EasyTableViewController {
 ```
 override func viewDidLoad() {
         super.viewDidLoad()
+        //you can setup our data here or use loadDataSource()
+        loadDataSource()
+    }
+```
+loadDataSource(...
+```
+override func loadDataSource() {
+        super.loadDataSource()
         // add 2 sections with 3 rows each
         for i in 0...1 {
             let section = TableSection(title: "Section \(i)")
@@ -41,7 +49,7 @@ override func viewDidLoad() {
         let section = TableSection()
         section.add(row: TableCellInfo(identifier: "Show more"))
         table.add(section: section)
-    }
+}
 ```
 * Conform to TableCellData for the data to your rows and cast from it in your rendering
 ```
