@@ -77,6 +77,10 @@ public class EasyTable {
         return self.at(index: at.section).row(at: at.row)
     }
     
+    public func row(row: Int, section: Int) -> TableCellInfo {
+        return self.row(at: IndexPath(row: row, section: section))
+    }
+    
     public func delete(section: Int) {
         sections.remove(at: section)
     }
