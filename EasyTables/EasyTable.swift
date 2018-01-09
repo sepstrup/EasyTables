@@ -37,8 +37,6 @@ public class EasyTable {
         self.tableView = tableView
     }
     
-    
-    
     public func section(at: Int) -> TableSection {
         return get(at: at)
     }
@@ -87,6 +85,10 @@ public class EasyTable {
     
     public func delete(row: IndexPath) {
         sections[row.section].rows.remove(at: row.row)
+    }
+    
+    public func clearAll() {
+        sections = []
     }
     
     /**
