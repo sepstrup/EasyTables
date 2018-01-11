@@ -91,6 +91,26 @@ public class EasyTable {
         sections = []
     }
     
+    public func getIndexPathFor(row: TableCellInfo) -> IndexPath? {
+        for (sectionIndex, section) in sections.enumerated() {
+            if let rowIndex = section.rows.index(of: row) {
+                return IndexPath(row: rowIndex, section: sectionIndex)
+            }
+        }
+        return nil
+    }
+    
+    public func getIndexpathFor(reference: String) -> IndexPath? {
+        for (sectionIndex, section) in sections.enumerated() {
+            for (rowIndex, row) in section.rows.enumerated() {
+                if row.getReference() == reference {
+                    return IndexPath(row: rowIndex, section: sectionIndex)
+                }
+            }
+        }
+        return nil
+    }
+    
     /**
      Add rows in the view, inserted with animation
      */
