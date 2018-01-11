@@ -36,5 +36,8 @@ public class TableCellInfo: Equatable {
         uuid = UUID().uuidString
     }
     
+    public func getReference() -> String {
+        return uuid
+    }
     
 }
