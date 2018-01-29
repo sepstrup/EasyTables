@@ -6,7 +6,7 @@ Demo project: https://github.com/sepstrup/EasyTablesDemo/
 
 
 Cocoapod:
-```
+```swift
 pod 'EasyTables', :git => 'https://github.com/sepstrup/EasyTables.git'
 ```
 ### What is this repository for? ###
@@ -18,14 +18,14 @@ pod 'EasyTables', :git => 'https://github.com/sepstrup/EasyTables.git'
 * Optional: Extend from EasyTableViewController when working with table views
 * - or implement count and header titels your self
 
-```
+```swift
 class TableViewController: EasyTableViewController {
 ...
 ```
 
 * Use the build in methods to easy build your data source
 
-```
+```swift
 override func viewDidLoad() {
         super.viewDidLoad()
         //you can setup our data here or use loadDataSource()
@@ -33,7 +33,7 @@ override func viewDidLoad() {
     }
 ```
 loadDataSource(...
-```
+```swift
 override func loadDataSource() {
         super.loadDataSource()
         // add 2 sections with 3 rows each
@@ -52,13 +52,13 @@ override func loadDataSource() {
 }
 ```
 * Conform to TableCellData for the data to your rows and cast from it in your rendering
-```
+```swift
 class CellData: TableCellData { 
     var subTitle: String?   
 }
 ```
 Cast it when you render your view
-```
+```swift
  case "Special Row":
             // get data from our CellData, conforms to protocol TableCellData
             guard let data = table.row(at: indexPath).data as? CellData else { break }
@@ -69,7 +69,7 @@ Cast it when you render your view
             specialCell.detailTextLabel?.text = data.subTitle
 ```
 * Use these methods to "live" update your view
-```
+```swift
     public func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo])
     
     public func removeRowsBelow(indexPath: IndexPath, numberOfRows: Int) 
@@ -77,7 +77,7 @@ Cast it when you render your view
     public func removeRowsAbove(indexPath: IndexPath, numberOfRows: Int, includeSender: Bool = false)
 ```
 Example:
-```
+```swift
 if !showMore {
                 // CellData for example
                 let data = CellData()
