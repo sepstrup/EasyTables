@@ -112,6 +112,23 @@ public class EasyTable {
     }
     
     /**
+     Remove row in the view with animation
+     */
+    public func removeRow(indexPath: IndexPath, numberOfRows: Int) {
+        //TODO: Needs to be testet
+        guard let table = tableView else { return }
+        var delRows: [IndexPath] = []
+        let section = at(index: indexPath.section)
+        for i in 0...numberOfRows-1 {
+            section.rows.remove(at: indexPath.row)
+            delRows.append(IndexPath(row: indexPath.row+i, section: indexPath.section))
+        }
+        table.beginUpdates()
+        table.deleteRows(at: delRows, with: .fade)
+        table.endUpdates()
+    }
+    
+    /**
      Add rows in the view, inserted with animation
      */
     public func addRowsBelow(indexPath: IndexPath, data: [TableCellInfo]) {
