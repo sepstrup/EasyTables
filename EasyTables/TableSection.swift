@@ -31,52 +31,63 @@ public class TableSection: Equatable {
         uuid = UUID().uuidString
     }
     
-    public required init(title: String) {
+    public required convenience init(title: String) {
+        self.init()
         self.title = title
-        uuid = UUID().uuidString
     }
     
-    public required init(title: String, rows: [TableCellInfo]) {
+    public required convenience init(footer: String) {
+        self.init()
+        self.footer = footer
+    }
+    
+    public required convenience init(title: String, footer: String) {
+        self.init()
+        self.title = title
+        self.footer = footer
+    }
+    
+    public required convenience init(title: String, rows: [TableCellInfo]) {
+        self.init()
         self.title = title
         self.rows = rows
-        uuid = UUID().uuidString
     }
     
-    public required init(title: String, footer: String, rows: [TableCellInfo]) {
+    public required convenience init(title: String, footer: String, rows: [TableCellInfo]) {
+        self.init()
         self.title = title
         self.footer = footer
         self.rows = rows
-        uuid = UUID().uuidString
     }
     
-    public required init(footer: String, rows: [TableCellInfo]) {
+    public required convenience init(footer: String, rows: [TableCellInfo]) {
+        self.init()
         self.footer = footer
         self.rows = rows
-        uuid = UUID().uuidString
     }
     
-    public required init(rows: [TableCellInfo]) {
+    public required convenience init(rows: [TableCellInfo]) {
+        self.init()
         self.rows = rows
-        uuid = UUID().uuidString
     }
     
-    public required init(title: String, rows: [String]) {
+    public required convenience init(title: String, rows: [String]) {
+        self.init()
         var newRows = [TableCellInfo]()
         for s in rows {
             newRows.append(identifier: s)
         }
         self.title = title
         self.rows = newRows
-        uuid = UUID().uuidString
     }
     
-    public required init(rows: [String]) {
+    public required convenience init(rows: [String]) {
+        self.init()
         var newRows = [TableCellInfo]()
         for s in rows {
             newRows.append(identifier: s)
         }
         self.rows = newRows
-        uuid = UUID().uuidString
     }
     
     public static func ==(lhs: TableSection, rhs: TableSection) -> Bool {
