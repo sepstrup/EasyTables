@@ -296,10 +296,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)Demo/../../Library/Developer/Xcode/DerivedData/EasyTables-gfoinadrgnrhchfxaicdjnyadlqk/Build/Products/Debug-iphonesimulator",
-				);
 				INFOPLIST_FILE = EasyTables/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -322,10 +318,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)Demo/../../Library/Developer/Xcode/DerivedData/EasyTables-gfoinadrgnrhchfxaicdjnyadlqk/Build/Products/Debug-iphonesimulator",
-				);
 				INFOPLIST_FILE = EasyTables/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

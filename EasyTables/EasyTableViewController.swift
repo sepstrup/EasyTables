@@ -29,6 +29,10 @@ open class EasyTableViewController: UITableViewController {
         return table.at(index: section).title
     }
     
+    override open func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return table.at(index: section).footer
+    }
+    
     open func loadDataSource() {
         table = EasyTable(tableView: self.tableView)
     }
