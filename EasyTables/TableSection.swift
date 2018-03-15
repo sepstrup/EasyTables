@@ -11,6 +11,7 @@ import Foundation
 public class TableSection: Equatable {
     
     public var title: String?
+    public var footer: String?
     public var rows: [TableCellInfo] = []
     private var uuid: String
     
@@ -37,6 +38,19 @@ public class TableSection: Equatable {
     
     public required init(title: String, rows: [TableCellInfo]) {
         self.title = title
+        self.rows = rows
+        uuid = UUID().uuidString
+    }
+    
+    public required init(title: String, footer: String, rows: [TableCellInfo]) {
+        self.title = title
+        self.footer = footer
+        self.rows = rows
+        uuid = UUID().uuidString
+    }
+    
+    public required init(footer: String, rows: [TableCellInfo]) {
+        self.footer = footer
         self.rows = rows
         uuid = UUID().uuidString
     }
